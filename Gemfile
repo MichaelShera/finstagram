@@ -3,7 +3,7 @@ source "https://rubygems.org"
 
 gem 'rake'
 gem 'activesupport'
-gem 'activerecord', '~> 4.2.0'
+gem 'activerecord', '~> 4.2.11.3'
 
 gem 'sinatra'
 gem 'sinatra-contrib'
@@ -15,5 +15,5 @@ gem 'tux'
 group :development, :test do
   gem 'pry'
   gem 'shotgun'
-  gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3', '~> 1.3.6'
 end
