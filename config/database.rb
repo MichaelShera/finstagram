@@ -7,7 +7,8 @@ configure do
       database: "db/db.sqlite3"
     }
   else
-    db = URI.parse(ENV['DATABASE_URL'])
+    db_url = 'postgres://uonwdbamkifopj:c2325472dba9444a7b6aefca3cb8acc7a0b5b3fe7241c1167ab1616fc59c77d9@ec2-44-199-158-170.compute-1.amazonaws.com:5432/d6uti02ktufv40'
+    db = URI.parse(ENV['DATABASE_URL'] || db_url)
     set :database, {
       adapter: "postgresql",
       host: db.host,
